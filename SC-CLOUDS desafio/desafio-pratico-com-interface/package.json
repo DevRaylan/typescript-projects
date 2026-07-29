@@ -4,11 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "serve": "serve .",
-    "start": "npm run build && start http://localhost:3000/public/index.html && npm run serve"
+    "serve": "http-server . -p 3000 -o /public/index.html",
+    "start": "npm run build && npm run serve"
   },
   "devDependencies": {
-    "serve": "^14.2.6",
+    "http-server": "^14.1.1",
     "typescript": "^5.9.2"
   }
 }

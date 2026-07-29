@@ -7,18 +7,20 @@ Projeto em TypeScript com implementação de algoritmos de Fibonacci e números 
 ```bash
 npm install
 npm run build
-npm start
+node dist/main.js
 ```
+
 ## Estrutura do projeto
 
 ```txt
 src/
 ├── fibonacci.ts
-├── primes.ts
+├── primos.ts
 └── main.ts
 ```
 
 ## Exemplos de saída
+
 ```bash
 fib recursiva 0: 0
 fib recursiva 1: 1
