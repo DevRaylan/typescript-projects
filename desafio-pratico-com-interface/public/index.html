@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafio Prático com Interface</title>
+  <link rel="stylesheet" href="/public/style.css?v=2" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <span class="badge">SC Clouds - Desafio Técnico</span>
+      <h1>Desafio Prático com Interface</h1>
+      <p class="hero-text">
+        Interface para testar Fibonacci e números primos com validação de entrada,
+        mensagens visuais e proteção contra travamentos.
+      </p>
+    </header>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Fibonacci</h2>
+        <span class="tag">N &gt;= 0</span>
+      </div>
+
+      <label for="fibonacciInput">Digite um número:</label>
+      <input type="number" id="fibonacciInput" min="0" placeholder="Ex.: 10" />
+
+      <p class="info">
+        A versão recursiva é limitada até 40 para evitar travamento da interface.
+      </p>
+
+      <div class="actions">
+        <button id="fibonacciButton" class="btn btn-primary">Calcular Fibonacci</button>
+        <button id="limparFibonacciButton" class="btn btn-secondary">Limpar</button>
+      </div>
+
+      <p id="fibonacciResultado" class="resultado resultado-neutro">
+        Informe um valor para calcular.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Números primos</h2>
+        <span class="tag">N &gt; 1</span>
+      </div>
+
+      <label for="primosInput">Digite um número:</label>
+      <input type="number" id="primosInput" min="2" placeholder="Ex.: 30" />
+
+      <p class="info">
+        Para evitar lentidão na interface, o limite sugerido é até 10000.
+      </p>
+
+      <div class="actions">
+        <button id="primosButton" class="btn btn-primary">Calcular primos</button>
+        <button id="limparPrimosButton" class="btn btn-secondary">Limpar</button>
+      </div>
+
+      <p id="primosResultado" class="resultado resultado-neutro">
+        Informe um valor para calcular.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="../dist/interface.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "desafio-pratico",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "serve": "serve .",
+    "start": "npm run build && start http://localhost:3000/public/index.html && npm run serve"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6",
+    "typescript": "^5.9.2"
+  }
+}

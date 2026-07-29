@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --main-verde: #3E7C59;
+  --main-vermelho: #961313;
+  --main-normal: #327355;
+  --main-exception: #ae0000;
+  --main-primary-claro: #e0382555;
+  --main-primary-escuro: #e03825;
+  --main-secondary-claro: #80298922;
+  --main-secondary-escuro: #802989;
+  --main-grey-claro: #eee;
+  --main-grey-escuro: #808285;
+
+  --bg: #f7f3f8;
+  --card: #ffffff;
+  --card-soft: #faf7fb;
+  --text: #2d2230;
+  --muted: #6c6370;
+  --border: #eadfec;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  background: linear-gradient(180deg, #faf5f8 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(
+    90deg,
+    var(--main-secondary-escuro) 0%,
+    #9a367e 45%,
+    var(--main-primary-escuro) 100%
+  );
+  color: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(128, 41, 137, 0.22);
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.hero-text {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 28px rgba(128, 41, 137, 0.07);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--main-secondary-escuro);
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--main-primary-escuro);
+  background: var(--main-primary-claro);
+  border: 1px solid rgba(224, 56, 37, 0.18);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d8ccd9;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+input::placeholder {
+  color: var(--main-grey-escuro);
+}
+
+input:focus {
+  border-color: var(--main-primary-escuro);
+  box-shadow: 0 0 0 4px var(--main-primary-claro);
+}
+
+.info {
+  margin: 10px 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  background: var(--card-soft);
+  border: 1px dashed #e5d5e9;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--main-primary-escuro);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--main-secondary-escuro);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--main-grey-claro);
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #dddddd;
+  transform: translateY(-1px);
+}
+
+.resultado {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.6;
+  min-height: 72px;
+}
+
+.resultado-neutro {
+  background: var(--main-secondary-claro);
+  border-color: rgba(128, 41, 137, 0.18);
+  color: var(--main-secondary-escuro);
+}
+
+.resultado-sucesso {
+  background: #eef8f1;
+  border-color: #b7d9c1;
+  color: var(--main-verde);
+}
+
+.resultado-erro {
+  background: #fff1f1;
+  border-color: #efc4c4;
+  color: var(--main-vermelho);
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .hero,
+  .card {
+    padding: 18px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .card h2 {
+    font-size: 21px;
+  }
+
+  .card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
